@@ -1,0 +1,9 @@
+.buttonradius{
+    margin: 10px;
+    background-color: #2980B9;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    width: 190px;
+}
