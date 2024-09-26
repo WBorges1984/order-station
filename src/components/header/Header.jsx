@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 
-function Header() {
+function Header({cupom, total}) {
   return (
     <header className='container-header'>
         <div className='logoHeader'>
@@ -10,11 +10,11 @@ function Header() {
         </div>
         <div className='container-header-right'>
             <div className='VendCupom'>
-                <span>Cupom: 00001</span>
+                <span>Cupom: {cupom}</span>
                 <span>Vendedor: Pedro barboza</span>
             </div>
             <div className='headerTotal'>
-                <h4>R$: 284,00</h4>
+                <h4>R$: {total}</h4>
             </div>
         </div>
 

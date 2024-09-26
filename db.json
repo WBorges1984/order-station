@@ -2,55 +2,57 @@
   "products": [
     {
       "id": 1,
-      "name": "Product A",
-      "price": 10
+      "name": "Calota prateada",
+      "un": "un",
+      "price": 100
     },
     {
       "id": 2,
-      "name": "Product B",
-      "price": 20
+      "name": "Retrovisor Passat",
+      "un": "par",
+      "price": 250
+    },
+    {
+      "id": 3,
+      "name": "Farol Fusca 64",
+      "un": "un",
+      "price": 560
+    }
+  ],
+  "clientes":[
+    {
+      "id": "0001",
+      "nome":"Barboza",
+      "email":"barbozinha@gmail.com"
     }
   ],
   "orders": [
     {
-      "id": "f027",
+      "id": "0001",
+      "idCliente":{
+        "id": "0001",
+        "nome":"Barboza"
+      },
       "products": [
         {
           "id": 1,
-          "name": "Product A",
-          "price": 10
+          "name": "Calota prateada",
+          "qtd": 1,
+          "unidade": "UN",
+          "desconto": 50,
+          "price": 150,
+          "total": 100
         },
         {
-          "id": 1,
-          "name": "Product A",
-          "price": 10
+          "id": 2,
+          "name": "Retrovisor Passat",
+          "qtd": 1,
+          "unidade": "UN",
+          "desconto": 0,
+          "price": 250,
+          "total": 250
         }
-      ],
-      "customer": {
-        "name": "WILLIAN BORGES DE MELLO",
-        "email": ""
-      },
-      "payment": ""
-    },
-    {
-      "id": "5314",
-      "products": [
-        {
-          "id": 1,
-          "name": "Product A",
-          "price": 10
-        },
-        {
-          "id": 1,
-          "name": "Product A",
-          "price": 10
-        }
-      ],
-      "customer": {
-        "name": "WILLIAN BORGES DE MELLO",
-        "email": ""
-      },
-      "payment": ""
+      ]
     }
   ]
 }

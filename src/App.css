@@ -12,3 +12,7 @@ main{
   height: 40px;
   width: 100%;
 }
+
+li{
+  list-style: none;
+}
