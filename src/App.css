@@ -1,3 +1,14 @@
 *{
   font-family: 'Poppins',Geneva, Verdana, sans-serif;
 }
+main{
+  height: 100%;
+}
+.footerApp{
+  display: flex;
+  gap:11px;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+}

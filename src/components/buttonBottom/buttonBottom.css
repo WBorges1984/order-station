@@ -1,0 +1,26 @@
+.btnBottom{
+    width: 161px;
+    height: 40px;
+    background-color: #2980B9;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+.btnBottom:hover{
+    background-color: #3494d4;
+
+}
+
+.btnBottom h4{
+    color: #fff;
+    font-weight: 600;
+}
+
+.imgFooterbnt{
+    width: 24px;
+}

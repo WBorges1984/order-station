@@ -4,14 +4,14 @@ import './cabecalhoItens.css'
 function CabecalhoItens() {
   return (
     <div className='cabecalhoItens'>
-        <span>Código produto</span>
-        <span>Descrição resumida</span>
-        <span>Cód. Unidade</span>
-        <span>Quantidade</span>
-        <span>% Desconto</span>
-        <span>Valor Unitário</span>
-        <span>valor Total</span>
-        <img src="../assets/delete.png" alt="" />
+        <span className='spanCod'>Código produto</span>
+        <span className='spanDes'>Descrição resumida</span>
+        <span className='spanUn'>Cód. Unidade</span>
+        <span className='spanQtd'>Quantidade</span>
+        <span className='spanDesc'>% Desconto</span>
+        <span className='spanUni'>Valor Unitário</span>
+        <span className='spanTot'>valor Total</span>
+        
     </div>
   )
 }

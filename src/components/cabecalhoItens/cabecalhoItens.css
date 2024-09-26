@@ -1,3 +1,38 @@
 .cabecalhoItens{
     display: flex;
+    gap: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.spanDes{
+    margin-right: 120px;
+}
+
+#codigo{
+    width: 121px;
+}
+
+#descricao{
+    width: 270px;
+}
+
+#unidade{
+    width: 100px;
+}
+
+#quantidade{
+    width: 100px;
+}
+
+#desconto{
+    width: 70px;
+}
+
+#unitario{
+    width: 105px;
+}
+
+#total{
+    width: 90px;
 }
