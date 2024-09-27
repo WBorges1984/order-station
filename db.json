@@ -44,13 +44,13 @@
           "total": 100
         },
         {
-          "id": "2",
-          "name": "Retrovisor Passat",
+          "id": "3",
+          "name": "Farol Fusca 64",
           "qtd": 1,
-          "un": "par",
+          "un": "un",
           "desconto": 0,
-          "price": 250,
-          "total": 250
+          "price": 560,
+          "total": 560
         },
         {
           "id": "1",
@@ -60,15 +60,6 @@
           "desconto": 0,
           "price": 100,
           "total": 100
-        },
-        {
-          "id": "3",
-          "name": "Farol Fusca 64",
-          "qtd": 1,
-          "un": "un",
-          "desconto": 0,
-          "price": 560,
-          "total": 560
         }
       ]
     }

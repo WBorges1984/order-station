@@ -6,7 +6,7 @@ import CabecalhoItens from './components/cabecalhoItens/CabecalhoItens.jsx';
 import ItensPedido from './components/itensPedido/ItensPedido.jsx';
 import ButtonBottom from './components/buttonBottom/ButtonBottom.jsx';
 
-// img icons
+// img icons dos buttons do bottom
 import encerrar from './assets/encerrar.png'
 import revisa from './assets/revisa.png'
 import abandona from './assets/abandonar.png'
@@ -20,6 +20,7 @@ import Modal from './components/modal/Modal.jsx';
 
     const [orders, setOrders] = useState([]);
     const [openModal, setOpenModal] = useState(false);
+    const [totalHeader, setTotalHeader] = useState(0);
 
     // Função para buscar os dados da API
   const fetchOrders = async () => {
@@ -28,6 +29,10 @@ import Modal from './components/modal/Modal.jsx';
       if (response.ok) {
         const data = await response.json();
         setOrders(data);
+        //Utilizado o Reduce para acumular o total
+        const totalAmount = data[0].products.reduce((acc, product) => acc + product.total, 0);
+        setTotalHeader(totalAmount)
+        
       } else {
         console.error('Erro ao buscar pedidos:', response.statusText);
       }
@@ -37,8 +42,10 @@ import Modal from './components/modal/Modal.jsx';
 
   };
 
+  // Atualiza as ordens após uma alteração
   const handleOrderUpdate = () => {
-    fetchOrders();  // Atualiza as ordens após uma alteração
+    fetchOrders();
+    setOpenModal(false)  
   };
 
    useEffect(() => {
@@ -48,9 +55,8 @@ import Modal from './components/modal/Modal.jsx';
   return (
     <div className="App">
       
-      <Header cupom={'123'} total={350}/>
+      <Header cupom={'123'} total={totalHeader}/>
       <main>
-        
         <ButtonRadius onCLick={()=>setOpenModal(!openModal)}>
           F9 Novo
         </ButtonRadius>
@@ -65,7 +71,7 @@ import Modal from './components/modal/Modal.jsx';
                                codigo={product.id}
                                descricao={product.name}
                                quantidade={product.qtd}
-                               unidade={product.unidade}
+                               unidade={product.un}
                                desconto={product.desconto}
                                unitario={product.price}
                                total={product.total}/>

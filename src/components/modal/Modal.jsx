@@ -81,6 +81,7 @@ export default function Modal({ isOpen, onOrderUpdate }) {
           setOrders(updatedOrderFromServer); // Atualiza o estado com a nova ordem
 
           onOrderUpdate();
+          
         }
       }
 
@@ -96,13 +97,18 @@ export default function Modal({ isOpen, onOrderUpdate }) {
         fetchOrder();
     }, []);
 
+    function ClosedModal(){
+      onOrderUpdate();
+      setModal(!modal)
+    }
+
 
   if (modal) {
     return (
       <div className="containerModal">
         <div className="conteudoModal">
             <ul className="ulModal">
-            <li><button onClick={()=> setModal(!modal)}>CLOSE</button></li>
+            <li><button onClick={ClosedModal }>CLOSE</button></li>
             <li id="codigo">Codigo</li>
             <li id="descricao">Descrição</li>
             <li id="unidade">Unidade</li>
