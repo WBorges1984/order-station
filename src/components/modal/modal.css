@@ -1,0 +1,36 @@
+.containerModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.conteudoModal{
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ulModal{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    align-items: center;
+    gap: 20px;
+}
+
+.ulModalItens{
+    display: flex;
+    flex-direction: row;
+    margin-left: 23px;
+    margin-top: 23px;
+    align-items: center;
+    gap: 20px;
+}

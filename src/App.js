@@ -13,11 +13,13 @@ import abandona from './assets/abandonar.png'
 import consulta from './assets/consulta.png'
 import outras from './assets/outras.png'
 import finaliza from './assets/finaliza.png'
+import Modal from './components/modal/Modal.jsx';
 
 
   const App = () => {
 
     const [orders, setOrders] = useState([]);
+    const [openModal, setOpenModal] = useState(false);
 
     // Função para buscar os dados da API
   const fetchOrders = async () => {
@@ -35,6 +37,9 @@ import finaliza from './assets/finaliza.png'
 
   };
 
+  const handleOrderUpdate = () => {
+    fetchOrders();  // Atualiza as ordens após uma alteração
+  };
 
    useEffect(() => {
     fetchOrders();
@@ -46,7 +51,7 @@ import finaliza from './assets/finaliza.png'
       <Header cupom={'123'} total={350}/>
       <main>
         
-        <ButtonRadius>
+        <ButtonRadius onCLick={()=>setOpenModal(!openModal)}>
           F9 Novo
         </ButtonRadius>
         <CabecalhoItens />
@@ -54,8 +59,8 @@ import finaliza from './assets/finaliza.png'
         {orders.map((order) => (
           <li key={order.id}>
             
-              {order.products.map((product) => (
-                <div key={product.id}>
+              {order.products.map((product, index) => (
+                <div key={index}>
                   <ItensPedido key={product.id}
                                codigo={product.id}
                                descricao={product.name}
@@ -69,7 +74,8 @@ import finaliza from './assets/finaliza.png'
            
           </li>
         ))}
-
+        
+        {openModal && <Modal isOpen={openModal} onOrderUpdate={handleOrderUpdate} />}
 
         <footer className='footerApp'>
           <ButtonBottom text={"ENCERAR"} imgSrc={encerrar}/>

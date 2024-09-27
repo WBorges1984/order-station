@@ -9,7 +9,7 @@ function ButtonBottom({text,imgSrc, ...props}) {
   return (
     <>
         <button className='btnBottom'>
-            <img className='imgFooterbnt' src={imgSrc}/>
+            <img className='imgFooterbnt' src={imgSrc} />
             <h4>{text}</h4>
         </button>
     </>

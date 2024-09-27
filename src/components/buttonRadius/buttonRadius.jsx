@@ -1,8 +1,8 @@
 import React from 'react'
 import './buttonRadius.css'
-function buttonRadius({children, ...props}) {
+function buttonRadius({children, onCLick,...props}) {
   return (
-    <button className='buttonradius'>
+    <button className='buttonradius' onClick={onCLick}>
         {children}
     </button>
   )
