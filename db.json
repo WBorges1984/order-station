@@ -34,33 +34,6 @@
         "nome": "Barboza"
       },
       "products": [
-        {
-          "id": "1",
-          "name": "Calota prateada",
-          "qtd": 1,
-          "un": "un",
-          "desconto": 0,
-          "price": 100,
-          "total": 100
-        },
-        {
-          "id": "3",
-          "name": "Farol Fusca 64",
-          "qtd": 1,
-          "un": "un",
-          "desconto": 0,
-          "price": 560,
-          "total": 560
-        },
-        {
-          "id": "1",
-          "name": "Calota prateada",
-          "qtd": 1,
-          "un": "un",
-          "desconto": 0,
-          "price": 100,
-          "total": 100
-        }
       ]
     }
   ]
