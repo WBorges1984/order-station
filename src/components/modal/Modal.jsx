@@ -74,7 +74,7 @@ export default function Modal({ isOpen, onOrderUpdate }) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedOrder)
         });
-        console.log('cracra', response)
+       
 
         if (response.ok) {
           const updatedOrderFromServer = await response.json();

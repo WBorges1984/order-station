@@ -35,22 +35,13 @@
       },
       "products": [
         {
-          "id": "1",
-          "name": "Calota prateada",
+          "id": "2",
+          "name": "Retrovisor Passat",
           "qtd": 1,
-          "un": "un",
+          "un": "par",
           "desconto": 0,
-          "price": 100,
-          "total": 100
-        },
-        {
-          "id": "3",
-          "name": "Farol Fusca 64",
-          "qtd": 1,
-          "un": "un",
-          "desconto": 0,
-          "price": 560,
-          "total": 560
+          "price": 250,
+          "total": 250
         },
         {
           "id": "1",
