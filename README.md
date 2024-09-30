@@ -1,70 +1,75 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Order Station
 
-## Available Scripts
+**Order Station** é uma aplicação React desenvolvida para gerenciar pedidos e produtos. A aplicação simula um backend utilizando o `json-server` e permite realizar operações como listagem e adição de produtos a pedidos.
 
-In the project directory, you can run:
+## Requisitos
 
-### `npm start`
+- [Node.js](https://nodejs.org) instalado na sua máquina.
+- [Git](https://github.com/WBorges1984/order-station) para clonar o repositório.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como Rodar o Projeto Localmente
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Siga os passos abaixo para baixar e executar o projeto localmente.
 
-### `npm test`
+### Passo 1: Clonar o Repositório
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone o repositório para a sua máquina local:
 
-### `npm run build`
+```bash
+git clone https://github.com/WBorges1984/order-station
+cd order-station
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Passo 2: Instalar Dependências
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Instale as dependências necessárias usando o npm:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+### Passo 3: Executar o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 1. Iniciar o Servidor de Desenvolvimento React
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para iniciar o servidor de desenvolvimento e executar a aplicação React, utilize o seguinte comando:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A aplicação será iniciada no navegador em [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+#### 2. Iniciar o JSON Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para simular o backend e fornecer dados para a aplicação, execute o seguinte comando para rodar o `json-server`:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npx json-server --watch db.json --port 3001
+```
 
-### Code Splitting
+O servidor será iniciado em [http://localhost:3001](http://localhost:3001), utilizando o arquivo `db.json` como base de dados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Passo 4: Acessar a Aplicação
 
-### Analyzing the Bundle Size
+Abra o navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar e interagir com a aplicação. Os dados de pedidos e produtos serão obtidos via a API simulada no `json-server`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Scripts Disponíveis
 
-### Making a Progressive Web App
+No projeto, você pode rodar os seguintes scripts:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **`npm start`**: Inicia a aplicação no ambiente de desenvolvimento.
+- **`npm run server`**: Inicia o `json-server` para simular a API backend.
+- **`npm run build`**: Compila a aplicação para produção na pasta `build`.
+- **`npm test`**: Executa testes usando o ambiente de testes do React.
+- **`npm run eject`**: Remove as dependências configuradas por padrão, permitindo modificações avançadas na configuração.
 
-### Advanced Configuration
+## Tecnologias Utilizadas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **React**: Biblioteca principal para a construção da interface de usuário.
+- **JSON Server**: Simula uma API RESTful para facilitar o desenvolvimento local.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto foi desenvolvido como uma demonstração de uma aplicação React que integra simulação de backend com `json-server` e utiliza hooks como `useState` e `useEffect` para gerenciar o estado da aplicação.
